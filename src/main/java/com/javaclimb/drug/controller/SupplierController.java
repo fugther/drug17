@@ -65,6 +65,9 @@ public class SupplierController {
     @ResponseBody
     public Object supplierAdd(Supplier supplier){
         try{
+
+
+
             supplier.setCreatetime(new Date());
             int i = supplierService.addSupplier(supplier);
             return ResultMapUtil.getHashMapSave(i);
